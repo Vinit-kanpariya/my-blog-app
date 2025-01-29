@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const posts = data.slice(0, 20).map((post:{ id: number; title: string; body: string;}) => ({
     id: post.id,
     title: post.title,
-    description: post.body.slice(0, 100) ,
+    description: post.body.slice(0, 100) + '...',
   }));
 
   return {
